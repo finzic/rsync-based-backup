@@ -11,7 +11,7 @@ SNAPSHOT_DEST=/mnt/storage/documents-snapshots-sv
 echo "Finding modified files and calculating checksums..."
 rm /tmp/md5-$DEST_FOLDER.txt
 cd $SOURCE_BASE
-rsync -nia --out-format="%i \"%f\"" $SOURCE_FOLDER bu@10.20.0.5:/home/bu/$DEST_FOLDER | egrep '<' | cut -d' ' -f2- | xargs md5sum > /tmp/md5-$DEST_FOLDER.txt
+rsync -nia --out-format="%i \"%f\"" $SOURCE_FOLDER bu@$DEST_IP:/home/bu/$DEST_FOLDER | egrep '<' | cut -d' ' -f2- | xargs md5sum > /tmp/md5-$DEST_FOLDER.txt
 echo "md5sums of modified files: "
 cat /tmp/md5-$DEST_FOLDER.txt
 # NOTABENE - check paths! 
