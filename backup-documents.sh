@@ -1,7 +1,7 @@
 #!/bin/bash
 # set -x
 ### VARIABLES. 
-DEST_IP=raspy
+DEST_IP=10.20.0.5
 SOURCE_BASE=/mnt/raid
 SOURCE_FOLDER=Documents
 SOURCE_PATH=$SOURCE_BASE/$SOURCE_FOLDER
