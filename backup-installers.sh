@@ -1,14 +1,13 @@
 #!/bin/bash
-#set -x
+# set -x
 ### VARIABLES. 
 DEST_IP=10.20.0.5
 SOURCE_BASE=/mnt/raid
 SOURCE_FOLDER=installers
-DEST_FOLDER=installers
-
 SOURCE_PATH=$SOURCE_BASE/$SOURCE_FOLDER
-SNAPSHOT_SOURCE=/mnt/storage/$DEST_FOLDER-sv
-SNAPSHOT_DEST=/mnt/storage/$DEST_FOLDER-snapshots-sv
+DEST_FOLDER=documents
+SNAPSHOT_SOURCE=/mnt/storage/installers
+SNAPSHOT_DEST=/mnt/storage/installers-snapshots-sv
 CREATE_SNAPSHOT=$1
 
 if [ x$CREATE_SNAPSHOT == x ]
@@ -80,3 +79,4 @@ EOF
 	cd $THIS
 	echo "Backup operation finished successfully."
 fi
+
