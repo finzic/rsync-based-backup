@@ -1,7 +1,7 @@
 #!/bin/bash
 # set -x
 ### VARIABLES. 
-DEST_IP=10.20.1.4
+DEST_IP=r4spi.local
 SOURCE_BASE=/mnt/raid
 SOURCE_FOLDER=Music
 SOURCE_PATH=$SOURCE_BASE/$SOURCE_FOLDER
