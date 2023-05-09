@@ -1,7 +1,7 @@
 #!/bin/bash
 # set -x
 ### VARIABLES. 
-DEST_IP=morla.local
+DEST_IP=morla
 DEST_USER=finzic
 SOURCE_BASE=/mnt/c/users/lucaf/OneDrive
 SOURCE_FOLDER=.
