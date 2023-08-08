@@ -6,7 +6,7 @@ DEST_USER=finzic
 SOURCE_BASE=/mnt/c/users/lucaf/OneDrive
 SOURCE_FOLDER=.
 SOURCE_PATH=$SOURCE_BASE
-DEST_FOLDER=OneDrive
+DEST_FOLDER=OneDrive_backup
 
 # calculating diff md5sums
 echo "Finding modified files and calculating checksums..."
