@@ -40,8 +40,8 @@ if [ $CHANGES -eq 0 ]
 then
 	echo "No changed files in $SOURCE_PATH - nothing to backup - operation completed." 
 else
-	echo "There are $CHANGES changed files - calculating md5sums..."
-	cat /tmp/changed-files.txt | xargs md5sum > /tmp/md5-$DEST_FOLDER.txt
+	echo "There are $CHANGES changed files - calculating md5sums parallelizing 4x..."
+	cat /tmp/changed-files.txt | xargs  -L1 -P4 md5sum > /tmp/md5-$DEST_FOLDER.txt
 	echo "md5sums of modified files: "
 	cat /tmp/md5-$DEST_FOLDER.txt
 	# NOTABENE - check paths! 
