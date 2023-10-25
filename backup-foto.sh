@@ -70,7 +70,7 @@ EOF
 		if [ $SNAPSHOT == 'true' ]
 		then
 	        	echo "Creating snapshot on destination"
-		        ssh -t pi@$DEST_IP "sudo btrfs subvolume snapshot $SNAPSHOT_SOURCE $SNAPSHOT_DEST/$DEST_FOLDER\_$(date +%Y.%m.%d-%H.%M.%S)"
+		        ssh -t finzic@$DEST_IP "sudo btrfs subvolume snapshot $SNAPSHOT_SOURCE $SNAPSHOT_DEST/$DEST_FOLDER\_$(date +%Y.%m.%d-%H.%M.%S)"
 		else
 			echo "No snapshot will be created."
 		fi	
